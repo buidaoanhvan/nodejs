@@ -29,8 +29,16 @@ class SERVICE_UNAVAILABLE extends ErrorResponse {
   }
 }
 
+class BAD_REQUEST extends ErrorResponse {
+  constructor(message) {
+    super(httpStatus.BAD_REQUEST, httpCode.BAD_REQUEST);
+    this.message = message;
+  }
+}
+
 module.exports = {
   NOT_FOUND,
   REQUEST_TIMEOUT,
   SERVICE_UNAVAILABLE,
+  BAD_REQUEST,
 };
